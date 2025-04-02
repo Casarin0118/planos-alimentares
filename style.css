@@ -1,0 +1,17 @@
+.body{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: rgb(33, 94, 163);
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
