@@ -1,14 +1,14 @@
-.body{
+body { /* Alterado de .body para body para estilizar a tag body */
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: rgb(33, 94, 163);
 }
-h1{
+h1 {
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
 }
-form{
+form {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
