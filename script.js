@@ -109,7 +109,7 @@ async function gerarPDF() {
     let contentStartY = 45; // Posição Y inicial para o conteúdo (ajustado para o background da primeira página) 
      
     // Informações básicas 
-    doc.setFontSize(18); 
+    doc.setFontSize(12); 
     contentStartY += 10; // Adiciona espaço após o título do plano alimentar
     
     // NOME (ESQUERDA)
