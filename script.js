@@ -10,7 +10,8 @@ async function gerarPDF() {
         intervaloManha: document.getElementById('intervaloManha').value,
         almoco: document.getElementById('almoco').value,
         intervaloTarde: document.getElementById('intervaloTarde').value,
-        jantar: document.getElementById('jantar').value
+        jantar: document.getElementById('jantar').value,
+        ceia: document.getElementById('ceia').value
     };
 
     // Formatar a data para o PDF (DD/MM/YYYY)
@@ -36,7 +37,7 @@ async function gerarPDF() {
     }
 
     // Validar campos obrigatórios
-    if (!formData.nome || !formData.data || !formData.cafeManha || !formData.almoco || !formData.jantar) {
+    if (!formData.nome || !formData.data || !formData.cafeManha || !formData.almoco || !formData.jantar || !formData.ceia) {
         alert('Por favor, preencha todos os campos obrigatórios!');
         return;
     }
@@ -175,6 +176,9 @@ async function gerarPDF() {
         contentStartY = await addFormattedMeal(doc, 'Intervalo da Tarde:', formData.intervaloTarde, contentStartY, contentStartX);
     }
     contentStartY = await addFormattedMeal(doc, 'Jantar:', formData.jantar, contentStartY, contentStartX);
+    if (formData.ceia){
+        contentStartY = await addFormattedMeal(doc, 'Ceia:', formData.ceia, contentStartY, contentStartX);
+    };
 
     // Salvar PDF
     doc.save(`Plano Alimentar - ${formData.nome}.pdf`);
